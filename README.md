@@ -2,13 +2,55 @@
 
 ## Overview
 
+This project demonstrates the deployment and configuration of a self-hosted artifact repository using Sonatype Nexus Repository Manager on a DigitalOcean cloud server. The environment was built from the ground up by provisioning a Linux cloud instance, installing and configuring Nexus, creating user access controls, and integrating Java build tools to publish Maven and Gradle artifacts.
+
+The goal of this project was to simulate an enterprise DevOps workflow where developers build applications and store versioned artifacts in a centralized repository for reliable deployment and distribution.
+
+---
+
 ## Technical Solution
+
+A DigitalOcean Ubuntu server was provisioned and secured using firewall rules and SSH access. Java 17 was installed as a dependency for Nexus Repository Manager, followed by the installation and configuration of Nexus as the artifact management platform.
+
+Nexus security was configured by creating users, assigning roles, and managing repository permissions. Hosted repositories were configured to support Java artifacts, allowing both Gradle and Maven build systems to publish JAR files directly into Nexus.
+
+The completed solution demonstrates the flow of application artifacts from local development environments into a centralized cloud-based repository.
+
+---
 
 ## Technologies Used
 
+- DigitalOcean
+- Ubuntu Linux
+- Sonatype Nexus Repository Manager
+- Java 17
+- Gradle
+- Apache Maven
+- Git
+- GitHub
+- SSH
+- Linux Command Line
+
+---
+
 ## Key Skills Demonstrated
 
+- Cloud Infrastructure Provisioning
+- Linux Server Administration
+- Secure Remote Access Using SSH
+- Firewall Configuration
+- Artifact Repository Management
+- Maven Repository Configuration
+- Gradle Build Automation
+- Java Application Packaging
+- User and Role-Based Access Control
+- Troubleshooting Deployment Issues
+- Version Control with Git
+
+---
+
 ## Project Walkthrough
+
 
 ## 1. Provisioning DigitalOcean Infrastructure
 
