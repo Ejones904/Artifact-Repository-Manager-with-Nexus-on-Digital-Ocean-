@@ -137,8 +137,8 @@ Hosted Maven / Gradle Artifact Repository
 
 ![Create Nexus User](images/15-create-nexus-user-in-ui.png)
 
-### Starting Nexus Manually Through CLI
-
+### Restarting Nexus Manually Through CLI
+- This was due to a break period
 ![Manual Nexus Start](images/16-manual-start-of-nexus-in-cli.png)
 
 ### Creating User Role
@@ -162,7 +162,7 @@ Hosted Maven / Gradle Artifact Repository
 ![Gradle Build](images/21-gradle-build.png)
 
 ### Troubleshooting Gradle Publishing
-
+- Through troubleshooting efforts this was determined to be a user permissions configuration issue.
 ![Gradle Troubleshooting](images/22-troubleshoot-gradle-publish.png)
 
 ### Successful Gradle Publish
