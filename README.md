@@ -18,6 +18,25 @@ The completed solution demonstrates the flow of application artifacts from local
 
 ---
 
+## Architecture Overview
+
+The project consists of a cloud-hosted artifact management environment running on DigitalOcean. Developers use Maven and Gradle build tools to package Java applications and publish versioned JAR artifacts to Nexus Repository Manager.
+
+Architecture flow:
+
+Developer Workstation  
+↓  
+Maven / Gradle Build Tool  
+↓  
+SSH Connection to Cloud Environment  
+↓  
+DigitalOcean Ubuntu Server  
+↓  
+Sonatype Nexus Repository Manager  
+↓  
+Hosted Maven / Gradle Artifact Repository
+
+---
 ## Technologies Used
 
 - DigitalOcean
@@ -177,3 +196,29 @@ The completed solution demonstrates the flow of application artifacts from local
 ### Verifying Artifact in Nexus
 
 ![Maven UI Validation](images/29--ui-validation.png)
+
+---
+
+## Validation
+
+The Nexus artifact repository deployment was validated through multiple testing steps:
+
+- Confirmed successful Nexus web interface access
+- Verified user authentication and role-based permissions
+- Built Java applications using Gradle
+- Published Gradle-generated JAR artifacts to Nexus
+- Built Java applications using Maven
+- Deployed Maven-generated JAR artifacts to Nexus
+- Confirmed uploaded artifacts were available through the Nexus Repository UI
+
+These validation steps demonstrate the complete artifact lifecycle from application build to centralized repository storage.
+
+---
+
+## Future Improvements
+
+- Integrate Nexus authentication with LDAP or Active Directory for enterprise user management
+- Automate Nexus deployment using Terraform or Ansible
+- Integrate artifact publishing into CI/CD pipelines using GitHub Actions or Jenkins
+- Configure Nexus as a systemd service for automated startup
+- Implement repository backup and disaster recovery procedures
